@@ -1,0 +1,12 @@
+﻿@model toxis.Models.ticketModel
+@{
+    ViewData["Title"] = "Детали билета";
+}
+
+<h2>Случайный билет получен!</h2>
+
+<p><strong>ID билета:</strong> @Model.ticketId</p>
+<p><strong>ФИО:</strong> @Model.fullName</p>
+<p><strong>Зона:</strong> @Model.zone</p>
+
+<a href="/">Вернуться к покупке</a>

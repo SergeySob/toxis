@@ -1,0 +1,32 @@
+﻿@model client
+@{
+    ViewData["Title"] = "Покупка билетов";
+}
+
+<h1>Покупка билетов</h1>
+
+<form method="post" asp-controller="Home" asp-action="Check">
+    
+    <label asp-for="firstName"></label>
+    <input asp-for="firstName" />
+    <span asp-validation-for="firstName"></span>
+
+    <label asp-for="secondName"></label>
+    <input asp-for="secondName" />
+    <span asp-validation-for="secondName"></span>
+
+    <label asp-for="surname"></label>
+    <input asp-for="surname" />
+    <span asp-validation-for="surname"></span>
+
+    <label asp-for="email"></label>
+    <input asp-for="email" />
+    <span asp-validation-for="email"></span>
+
+    <label asp-for="SelectedZone"></label>
+    <select asp-for="SelectedZone" asp-items="Model.Zones"></select>
+    <span asp-validation-for="SelectedZone"></span>
+
+    <input type="submit" value="Купить билет" />
+</form>
+
